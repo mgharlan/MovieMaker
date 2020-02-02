@@ -1,0 +1,30 @@
+Script started on Fri 07 Dec 2018 08:36:29 PM PST
+]0;mgharlan@zuma:hw5[mgharlan@zuma hw5]$ make MovieLab
+gcc -ansi -std=c99 -Wall -c MovieLab.c -o MovieLab.o
+gcc -ansi -std=c99 -Wall -c FileIO.c -o FileIO.o
+gcc -ansi -std=c99 -Wall -c Image.c -o Image.o
+gcc -ansi -std=c99 -Wall -c Movie.c -o Movie.o
+gcc -ansi -std=c99 -Wall -c MovieIO.c -o MovieIO.o
+gcc -ansi -std=c99 -Wall -c IterativeFilter.c -o IterativeFilter.o
+gcc -ansi -std=c99 -Wall -c ImageList.c -o ImageList.o
+gcc -ansi -std=c99 -Wall -c DIPs.c -o DIPs.o
+ar rc libFilter.a  DIPs.o
+ranlib libFilter.a
+gcc -ansi -std=c99 -Wall MovieLab.o FileIO.o Image.o Movie.o MovieIO.o IterativeFilter.o ImageList.o -lm -L. -lFilter -o MovieLab
+]0;mgharlan@zuma:hw5[mgharlan@zuma hw5]$ make MovieLab[22Gexit[Kmake clean[22G./MovieLab -i HSSOE.ppm -o sat.yuv -start= 100 -end= 500 -step= 10 -satu ratione[K[A[34Gm hue.yuv -o reverse.yuv -f 73 -s 300x200 -reverse[K[93G r[K[A[84G[34Gi HSSOE.ppm -o hue.yuv -start= 0 -end= 5 -step= 0.5 -hue[34Gm mouse.yuv -o test.yuv -f 75 -s 480x270 -reverse[K[34Gi HSSOE.ppm -o hue.yuv -start= 0 -end= 5 -step= 0.5 -hue
+The movie file hue.yuv has been written successfully!
+11 frames are written to the file hue.yuv in total.
+]0;mgharlan@zuma:hw5[mgharlan@zuma hw5]$ ./MovieLab -i HSSOE.ppm -o hue.yuv -start= 0 -end= 5 -step= 0.5 -hue[22Gmake MovieLab[K[22Gexit[Kmake clean[22G./MovieLab -i HSSOE.ppm -o sat.yuv -start= 100 -end= 500 -step= 10 -satu ratione[K[A[34Gm hue.yuv -o reverse.yuv -f 73 -s 300x200 -reverse[K[93G r[K[A[84G
+The movie file hue.yuv has been read successfully!
+The movie file reverse.yuv has been written successfully!
+73 frames are written to the file reverse.yuv in total.
+]0;mgharlan@zuma:hw5[mgharlan@zuma hw5]$ ./MovieLab -m hue.yuv -o reverse.yuv -f 73 -s 300x200 -reverse[34Gi HSSOE.ppm -o hue.yuv -start= 0 -end= 5 -step= 0.5 -hue[22Gmake MovieLab[K[22Gexit[Kmake clean[22G./MovieLab -i HSSOE.ppm -o sat.yuv -start= 100 -end= 500 -step= 10 -satu ration
+The movie file sat.yuv has been written successfully!
+41 frames are written to the file sat.yuv in total.
+]0;mgharlan@zuma:hw5[mgharlan@zuma hw5]$ ./MovieLab -i HSSOE.ppm -o sat.yuv -start= 100 -end= 500 -step= 10 -satu ration[A[34Gm hue.yuv -o reverse.yuv -f 73 -s 300x200 -reverse[K[93G r[K[A[84G[34Gi HSSOE.ppm -o sat.yuv -start= 100 -end= 500 -step= 10 -satu ration[A[22G[K[93G r[K[A[22Gmake clean
+rm -f *.o *.a MovieLab MovieLabTest `find . -name '*.ppm' ! -name 'HSSOE.ppm'`
+rm -f *.yuv
+]0;mgharlan@zuma:hw5[mgharlan@zuma hw5]$ exit
+exit
+
+Script done on Fri 07 Dec 2018 08:37:23 PM PST

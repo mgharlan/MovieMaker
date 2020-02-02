@@ -1,0 +1,13 @@
+Mason Harlan
+StudentID#63263805
+
+HW5:
+This final project was pretty incredible. I can see how more complex data structures 
+can be used as a very powerful tool and I really enjoyed making the double linked list.
+ My reverse function handles the first entry first and then enters a loop to handle the
+ other entries. The void previous pointer of the first entry was causing errors so I 
+handled it out of the loop. The hue and saturation filters were not difficult to 
+implement. The hardest part that I faced was seperating the heigth and width when the 
+user inputs the size. I learned that when pointers all point to the same place, if 
+you modify one they all get modified. I was able to implement all the pieces succefully.
+ This MovieLab was one of the most fun labs!
