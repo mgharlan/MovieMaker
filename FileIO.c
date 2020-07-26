@@ -154,14 +154,14 @@ int SaveImage(const char *fname, const IMAGE *image)
 	 * Rename file to image.ppm, convert it to ~/public_html/<fname>.jpg
 	 * and make it world readable
 	 */
-	sprintf(SysCmd, "/users/grad2/doemer/eecs22/bin/pnmtojpeg_hw4.tcsh %s",
+	/*sprintf(SysCmd, "/users/grad2/doemer/eecs22/bin/pnmtojpeg_hw4.tcsh %s",
 			fname_tmp2);
 	if (system(SysCmd) != 0) {
 #ifdef DEBUG
 		printf("\nError while converting to JPG:\nCommand \"%s\" failed!\n", SysCmd);
 #endif
 		return 3;
-	}
+	}*/
 #ifdef DEBUG
 	printf("%s.jpg was stored for viewing. \n", fname_tmp);
 #endif
