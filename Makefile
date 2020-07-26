@@ -58,5 +58,5 @@ IterativeFilter.o: IterativeFilter.c $(DEPS)
 #	$(CC) $(CFLAGS) $(DEBUG) Test.c -o Test_DEBUG.o
 
 clean:
-	rm -f *.o *.a $(DESIGN) `find . -name '*.ppm' ! -name 'HSSOE.ppm'`
+	rm -f *.o *.a $(DESIGN)
 	rm -f *.yuv
